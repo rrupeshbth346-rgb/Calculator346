@@ -1,0 +1,207 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color-scheme: dark;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: radial-gradient(circle at top, #243b55, #0b1020 65%);
+    color: #f8fafc;
+}
+
+.calculator {
+    width: min(100%, 360px);
+    padding: 24px;
+    border: 1px solid #ffffff20;
+    border-radius: 28px;
+    background: #151b2b;
+    box-shadow: 0 25px 70px #0008;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.theme-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #ffffff20;
+    border-radius: 50%;
+    background: #252e42;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.screen {
+    padding: 18px 12px;
+    min-height: 115px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background: #0b1220;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.history {
+    min-height: 24px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+#display {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #67e8f9;
+    text-align: right;
+    font-size: clamp(2rem, 10vw, 2.6rem);
+    font-weight: 700;
+    font-family: "Courier New", monospace;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.keys button {
+    min-width: 0;
+    height: 58px;
+    border: 1px solid #ffffff0d;
+    border-radius: 16px;
+    background: #252e42;
+    color: #f8fafc;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.12s, background 0.12s;
+}
+
+.keys button:hover {
+    background: #35425c;
+}
+
+.keys button:active {
+    transform: scale(0.94);
+}
+
+.keys button:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 2px;
+}
+
+.keys .clear {
+    background: #7f2639;
+    color: #fecdd3;
+}
+
+.keys .operator {
+    background: #233f70;
+    color: #93c5fd;
+}
+
+.keys .equals {
+    background: linear-gradient(135deg, #06b6d4, #6366f1);
+    color: white;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.72rem;
+    color: #64748b;
+}
+
+body.light {
+    background: linear-gradient(135deg, #dbeafe, #f1f5f9);
+    color: #172033;
+}
+
+body.light .calculator {
+    background: #ffffff;
+    border-color: #dbe3ee;
+}
+
+body.light .screen {
+    background: #eef4fb;
+}
+
+body.light #display {
+    color: #075985;
+}
+
+body.light .keys button {
+    background: #e7edf6;
+    color: #172033;
+}
+
+body.light .keys .clear {
+    background: #ffe0e5;
+    color: #9f1239;
+}
+
+body.light .keys .operator {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+body.light .keys .equals {
+    background: linear-gradient(135deg, #0891b2, #4f46e5);
+    color: white;
+}
+
+body.light .theme-btn {
+    background: #e7edf6;
+    color: #172033;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        padding: 16px;
+    }
+
+    .keys {
+        gap: 8px;
+    }
+
+    .keys button {
+        height: 54px;
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .keys button {
+        transition: none;
+    }
+}
