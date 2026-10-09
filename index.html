@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calc" aria-label="Calculator">
+    <div class="screen" aria-live="polite">
+      <div class="history" id="history"></div>
+      <div class="display" id="display">0</div>
+    </div>
+    <div class="keys" id="keys">
+      <button class="clear" data-action="clear">AC</button>
+      <button data-action="delete" aria-label="Delete last digit">⌫</button>
+      <button data-action="percent">%</button>
+      <button class="op" data-action="op" data-op="/">÷</button>
+
+      <button data-num="7">7</button>
+      <button data-num="8">8</button>
+      <button data-num="9">9</button>
+      <button class="op" data-action="op" data-op="*">×</button>
+
+      <button data-num="4">4</button>
+      <button data-num="5">5</button>
+      <button data-num="6">6</button>
+      <button class="op" data-action="op" data-op="-">−</button>
+
+      <button data-num="1">1</button>
+      <button data-num="2">2</button>
+      <button data-num="3">3</button>
+      <button class="op" data-action="op" data-op="+">+</button>
+
+      <button class="zero" data-num="0">0</button>
+      <button data-action="dot">.</button>
+      <button class="op" data-action="equals">=</button>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
